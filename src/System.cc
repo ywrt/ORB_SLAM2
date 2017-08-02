@@ -64,14 +64,6 @@ System::System(const string &strVocFile, const string &strSettingsFile, const eS
     }
     bool bReuseMap = false;
 
-#ifdef FUNC_MAP_SAVE_LOAD_NO
-    cv::FileNode mapfilen = fsSettings["Map.mapfile"];
-    if (!mapfilen.empty())
-    {
-        mapfile = (string)mapfilen;
-    }
-#endif
-
     //Load ORB Vocabulary
     cout << endl << "Loading ORB Vocabulary. This could take a while..." << endl;
 
